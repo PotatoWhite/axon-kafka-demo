@@ -1,0 +1,21 @@
+axon:
+  serializer:
+    general: jackson
+  eventhandling:
+    processors:
+      "[DemoProcessor]":
+        source: kafkaMessageSource
+        mode: TRACKING
+        threadCount: 1
+        batchSize: 1
+  kafka:
+    clientid: myconsumer
+    defaulttopic: mydefaulttopic
+    consumer:
+      group-id: boot
+      bootstrapservers:
+        - 127.0.0.1:9092
+
+logging:
+  level:
+    ROOT: INFO

@@ -1,0 +1,5 @@
+rootProject.name = 'axon-kafka-demo'
+include 'producer-events'
+include 'producer'
+include 'consumer'
+
